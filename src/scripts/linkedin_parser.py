@@ -1,21 +1,9 @@
 from bs4 import BeautifulSoup
 import re
 import json
+import calendar
 
-
-MONTHS = [
-    "Jan 20",
-    "Fev 20",
-    "Mar 20",
-    "Abr 20",
-    "Jun 20",
-    "Jul 20",
-    "Ago 20",
-    "Set 20",
-    "Out 20",
-    "Nov 20",
-    "Dez 20",
-]
+MONTHS = [calendar.month_abbr[i] + " 20" for i in range(1, 13)]
 
 
 class LinkedinParser:
