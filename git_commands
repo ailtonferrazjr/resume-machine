@@ -1,0 +1,47 @@
+## VENV WRAPPER COMMANDS
+
+workon <nome_virtual_env> ## iniciar um venv no terminal
+mkvirtualenv <nome_virtual_env> ## criar novo venv na minha pasta de venvs
+lsvirtualenv ## listar todos os venvs na minha maquina
+rmvirtualenv <nome_virtual_env> ## deletar um venv na minha pasta
+deactivate ## desligar o venv atual no terminal
+
+## GIT COMMANDS
+
+git add . ## adicionar todas as mudanças no nivel herarquico para o stage
+git commit -m "<msg>" ## comitar todas as mudanças do stage para um novo comit
+git push ## jogar mudança de local (comit) para remot
+git clone <url> ## clonar um repositorio para meu nivel herarquico atual
+git checkout <branch_name> ## mudar para branch especificada
+git checkout -b <branch_name> ## criar branch
+git pull ## trazer todos os commits para o branch em uso
+
+## COMMANDS DE PIP
+
+pip3 install <package_name> ## instalar um pacote
+pip3 install -r <requirements.txt> ## instalar o requirements file presente no diretorio
+pip3 freeze ## listar todos os pacotes instalados nesse venv
+pip3 freeze > <requirements.txt> ## cria um arquivo txt com todos os pacotes no venv
+pip3 uninstall <package_name> ## desinstalar um pacote
+pip3 install <package_name> --upgrade ## atualizar um pacote
+
+## COMMANDOS DE TERMINAL
+
+pwd ## printar o meu diretorio atual
+--help ## dar instrucoes para qualquer comando em geral
+mkdir ## criar pasta
+ls -l ## ver todas os arquivos em lista
+ls -h ## ver os arquivos de forma "human readable"
+ls -a ## ver ALL (inclusive as hidden)
+ls -lha ## ver todas as pastas de forma organizada
+mv <path_1> <path_2> ## movendo um arquivo no path1 para o local do path2 (criar/renomear arquivos)
+mv <path_1> . ## movendo o arquivo do path1 para o nivel hierarquico atual
+code . ## abrir vscode do nivel hierarquico atual
+cp <path_1> <path_2> ## copia um arquivo no path1 para o local do path2
+rm <path_1> ## deleta um arquivo no path1
+rm -r <path_1> ## deleta uma pasta de maneira recursiva (todas dentro/abaixo dela)
+touch <path_1> ## cria um arquivo com a extensao descrita 
+cd .. ## retornar uma pasta para cima
+cd ~/ ## retornar para HOME
+cd $HOME ## retornar para HOME
+
