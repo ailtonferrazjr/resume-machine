@@ -6,6 +6,7 @@ from scrapper_log import ScrappingLogs
 from linkedin_parser import LinkedinParser
 
 dotenv.load_dotenv()
+print("oi")
 
 CREDENTIALS = {
     "username": os.environ.get("EMAIL_LINKEDIN"),
