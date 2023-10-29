@@ -97,7 +97,7 @@ class LinkedinBot:
         time.sleep(LONG_DELAY)
         html = session.page_source
         with open(
-            file=f"resume_machine/src/html_files/{page_name}.html", mode="w"
+            file=f"src/html_files/{page_name}.html", mode="w"
         ) as file:
             file.write(html)
         self.logs.update_json(page_name=page_name)

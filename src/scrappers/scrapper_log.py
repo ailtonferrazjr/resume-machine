@@ -1,7 +1,7 @@
 import json
 from datetime import datetime, timedelta
 
-LOG_PATH = "resume_machine/src/html_files/scrapping_logs.json"
+LOG_PATH = "src/html_files/scrapping_logs.json"
 JSON_TEMPLATE = {
     "experience": str(datetime.min),
     "education": str(datetime.min),
@@ -25,7 +25,7 @@ class ScrappingLogs:
             print("Log file was not found, creating one")
             data = JSON_TEMPLATE
             with open(file_path, "w") as f:
-                json.dump(data, f)
+                json.dump(data, f, indent=3)
         return data
 
     # 2. Check if deadline is exceeded
@@ -41,6 +41,6 @@ class ScrappingLogs:
             data = json.load(f)
         data[page_name] = str(datetime.now())
         with open(self.log_path, "w") as f:
-            json.dump(data, f)
+            json.dump(data, f, indent=3)
             print(f"New log saved for page '{page_name}'")
         self.data = self.read_or_create_json(self.log_path)

@@ -14,9 +14,7 @@ class LinkedinParser:
 
     def load_soup(self, page_name: str) -> BeautifulSoup:
         self.page_name = page_name
-        with open(
-            file=f"resume_machine/src/html_files/{page_name}.html", mode="r"
-        ) as file:
+        with open(file=f"src/html_files/{page_name}.html", mode="r") as file:
             return BeautifulSoup(file, "html.parser")
 
     def parse_experience(self, soup: BeautifulSoup):
@@ -80,13 +78,11 @@ class LinkedinParser:
             if company is not None:
                 experiences_list.append(company)
 
-        experiences_json = json.dumps(experiences_list, ensure_ascii=False)
+        experiences_json = json.dumps(experiences_list, ensure_ascii=False, indent=3)
         self.save_to_db(page_name=self.page_name, json=experiences_json)
 
     def save_to_db(self, page_name: str, json: str):
-        with open(
-            f"resume_machine/src/html_files/json_files/{page_name}.json", mode="w"
-        ) as file:
+        with open(f"src/html_files/json_files/{page_name}.json", mode="w") as file:
             file.write(json)
 
 
